@@ -57,9 +57,7 @@ JWT_SECRET=ghdjv7b8o87yi7tufb
 # ======================
 # GOOGLE OAUTH
 # ======================
-GOOGLE_CLIENT_ID=858562876105-f1246vjnseemc82m5uqg4bcggb1u52jm.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=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
-REDIRECT_URI=http://localhost:5000/auth/google/redirect
+
 
 # ======================
 # EMAIL (SMTP)
