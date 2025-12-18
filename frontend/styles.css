@@ -327,3 +327,121 @@ header {
   font-weight: bold;
   color: var(--primary-color);
 }
+
+/* Opportunities Section */
+.opportunities {
+  padding: 60px 20px;
+}
+
+.opportunities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.opportunities-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.view-all-btn {
+  background-color: var(--button-secondary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.opportunities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.opportunity-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.opportunity-info {
+  flex: 1;
+}
+
+.opportunity-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.opportunity-company {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.opportunity-company img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.opportunity-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.opportunity-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.opportunity-salary {
+  font-size: 14px;
+  color: #666;
+}
+
+.opportunity-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.apply-btn {
+  background-color: var(--button-primary);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.urgent-badge {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+}
