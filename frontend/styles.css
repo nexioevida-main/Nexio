@@ -338,6 +338,8 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .opportunities-title {
@@ -352,6 +354,7 @@ header {
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .opportunities-list {
@@ -368,10 +371,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .opportunity-info {
   flex: 1;
+  min-width: 250px;
 }
 
 .opportunity-title {
@@ -417,6 +423,7 @@ header {
   display: flex;
   gap: 8px;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .tag {
@@ -506,4 +513,162 @@ header {
   text-decoration: none;
   font-weight: 500;
   text-align: center;
+}
+
+/* Media Queries for Desktop */
+@media (min-width: 768px) {
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .nav-menu ul {
+    gap: 20px;
+  }
+
+  .nav-menu a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .auth-buttons {
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 80px 40px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .btn-large {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .stats-section {
+    padding: 60px 40px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .how-it-works {
+    padding: 80px 40px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .steps-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .step {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+  .verified-professionals {
+    padding: 80px 40px;
+  }
+
+  .professionals-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .opportunities {
+    padding: 80px 40px;
+  }
+
+  .opportunities-header {
+    margin-bottom: 40px;
+  }
+
+  .opportunities-title {
+    font-size: 32px;
+  }
+
+  .opportunities-list {
+    gap: 30px;
+  }
+
+  .opportunity-card {
+    padding: 25px;
+  }
+
+  .opportunity-title {
+    font-size: 20px;
+  }
+
+  .platform-comparison {
+    padding: 80px 40px;
+  }
+
+  .comparison-title {
+    font-size: 32px;
+  }
+
+  .comparison-header {
+    padding: 20px;
+  }
+
+  .comparison-row {
+    padding: 20px;
+  }
+
+  .comparison-row:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .comparison-header {
+    padding: 20px 30px;
+  }
+
+  .comparison-row {
+    padding: 20px 30px;
+  }
 }
