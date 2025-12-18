@@ -113,3 +113,73 @@ header {
   background-color: var(--primary-color);
   color: var(--button-text);
 }
+
+/* Hero Section */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--gray-color);
+  position: relative;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.hero-title span {
+  color: var(--primary-color);
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.btn-large {
+  padding: 12px 25px;
+  font-size: 16px;
+}
+
+.stats-section {
+  background-color: white;
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+
+.stats-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
