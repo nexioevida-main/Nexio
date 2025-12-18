@@ -219,7 +219,6 @@ header {
 .step-icon {
   width: 40px;
   height: 40px;
-  background-color: var(--primary-color);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -308,11 +307,13 @@ header {
 .project-title {
   font-size: 14px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 .project-stats {
   display: flex;
-  gap: 20px;
+  gap: 90px;
   margin-top: 15px;
   font-size: 14px;
 }
