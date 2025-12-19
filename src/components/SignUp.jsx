@@ -35,6 +35,14 @@ const SignUp = () => {
 
                     <div className="flex items-center w-full border border-gray-300/60 h-12 rounded-md overflow-hidden px-4 mb-4">
                         <input
+                            type="text"
+                            placeholder="Username"
+                            className="bg-transparent text-gray-500/80 placeholder-gray-500/80 outline-none text-sm w-full h-full"
+                            required
+                        />
+                    </div>
+                    <div className="flex items-center w-full border border-gray-300/60 h-12 rounded-md overflow-hidden px-4 mb-4">
+                        <input
                             type="email"
                             placeholder="johndoe@gmail.com"
                             className="bg-transparent text-gray-500/80 placeholder-gray-500/80 outline-none text-sm w-full h-full"
@@ -97,6 +105,7 @@ const SignUp = () => {
                         type="submit"
                         className="mt-6 w-full h-11 rounded-md text-white bg-[#449FED] hover:opacity-90 transition-opacity"
                     >
+                   
                         Create Account
                     </button>
 
