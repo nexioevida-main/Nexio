@@ -327,6 +327,64 @@ main {
   text-decoration: underline;
 }
 
+/* Share Portfolio Section */
+.share-portfolio {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.share-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.share-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-primary {
+  background-color: var(--button-primary);
+  color: var(--button-text);
+}
+
+.btn-primary:hover {
+  background-color: #3a7bd5;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--button-text);
+}
+
 /* Challenges Section */
 .challenges-section {
   margin-bottom: 20px;
@@ -463,64 +521,6 @@ main {
   color: #666;
 }
 
-/* Share Portfolio Section */
-.share-portfolio {
-  background-color: #f0f8ff;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.share-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.share-description {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.share-buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 8px 15px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.btn-primary {
-  background-color: var(--button-primary);
-  color: var(--button-text);
-}
-
-.btn-primary:hover {
-  background-color: #3a7bd5;
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.btn-outline:hover {
-  background-color: var(--primary-color);
-  color: var(--button-text);
-}
-
 /* Browse All Button */
 .browse-button {
   background-color: transparent;
@@ -539,4 +539,215 @@ main {
 .browse-button:hover {
   background-color: var(--button-secondary);
   color: white;
+}
+
+/* Media Queries for Desktop */
+@media (min-width: 768px) {
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .nav-menu ul {
+    gap: 20px;
+  }
+
+  .nav-menu a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .user-actions {
+    gap: 15px;
+  }
+
+  .main-content {
+    display: flex;
+    gap: 20px;
+  }
+
+  .left-column {
+    flex: 2;
+  }
+
+  .right-column {
+    flex: 1;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section {
+    padding: 25px;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-header {
+    margin-bottom: 15px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-meta {
+    font-size: 14px;
+  }
+
+  .card-match {
+    font-size: 20px;
+  }
+
+  .share-portfolio {
+    padding: 25px;
+  }
+
+  .share-title {
+    font-size: 18px;
+  }
+
+  .share-description {
+    font-size: 16px;
+  }
+
+  .challenges-section {
+    margin-bottom: 25px;
+  }
+
+  .challenges-header {
+    margin-bottom: 15px;
+  }
+
+  .challenges-title {
+    font-size: 18px;
+  }
+
+  .challenge-card {
+    padding: 20px;
+  }
+
+  .challenge-header {
+    margin-bottom: 15px;
+  }
+
+  .challenge-title {
+    font-size: 18px;
+  }
+
+  .challenge-description {
+    font-size: 16px;
+  }
+
+  .recommended-steps {
+    margin-bottom: 25px;
+  }
+
+  .step-card {
+    padding: 20px;
+  }
+
+  .step-title {
+    font-size: 16px;
+  }
+
+  .step-description {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .header-content {
+    padding: 0 40px;
+  }
+
+  .welcome-title {
+    font-size: 32px;
+  }
+
+  .welcome-subtitle {
+    font-size: 16px;
+  }
+
+  .stats-grid {
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-value {
+    font-size: 32px;
+  }
+
+  .section {
+    padding: 30px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-match {
+    font-size: 24px;
+  }
+
+  .share-portfolio {
+    padding: 30px;
+  }
+
+  .share-title {
+    font-size: 20px;
+  }
+
+  .challenges-header {
+    margin-bottom: 20px;
+  }
+
+  .challenges-title {
+    font-size: 20px;
+  }
+
+  .challenge-card {
+    padding: 25px;
+  }
+
+  .challenge-title {
+    font-size: 20px;
+  }
+
+  .step-card {
+    padding: 25px;
+  }
+
+  .step-title {
+    font-size: 18px;
+  }
 }
