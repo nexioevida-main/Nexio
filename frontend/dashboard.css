@@ -520,3 +520,23 @@ main {
   background-color: var(--primary-color);
   color: var(--button-text);
 }
+
+/* Browse All Button */
+.browse-button {
+  background-color: transparent;
+  border: 1px solid var(--button-secondary);
+  color: var(--button-secondary);
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  transition: all 0.3s;
+}
+
+.browse-button:hover {
+  background-color: var(--button-secondary);
+  color: white;
+}
