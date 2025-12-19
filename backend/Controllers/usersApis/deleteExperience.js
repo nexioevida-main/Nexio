@@ -10,8 +10,9 @@ export default async (req, res) => {
       });
     }
 
-    experience.remove();
+        req.user.experience.pull(experienceId);
     await req.user.save();
+
 
     res.status(200).json({
       message: "Experience deleted successfully",

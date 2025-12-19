@@ -2,7 +2,7 @@ export default async (req, res) => {
   try {
     const { title, company, startDate, endDate, isCurrent, description } =
       req.body;
-      const newstartDate = new Date(startDate)// should be yy-mm-dd
+      
     if (!title || !company || !startDate) {
       return res.status(400).json({
         message: "Title, company and start date are required",
@@ -12,7 +12,7 @@ export default async (req, res) => {
     req.user.experience.push({
       title,
       company,
-      newstartDate,
+      startDate,
       endDate,
       isCurrent,
       description,
