@@ -19,6 +19,8 @@ POST /api/users/me/skills
 
 DELETE /api/users/me/skills/:id
 
+PATCH /API/users/me/skills/:id
+
 POST /api/users/me/experience
 
 PUT /api/users/me/experience/:id
