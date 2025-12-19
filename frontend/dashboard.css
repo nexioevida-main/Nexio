@@ -206,7 +206,7 @@ main {
   margin-top: 5px;
 }
 
-/* your proof profile section */
+/* Section Styles */
 .section {
   background-color: white;
   border: 1px solid var(--border-color);
@@ -235,10 +235,6 @@ main {
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.view-all-link:hover {
-  text-decoration: underline;
 }
 
 .view-all-link:hover {
@@ -332,27 +328,98 @@ main {
   text-decoration: underline;
 }
 
-/* Share Portfolio Section */
-.share-portfolio {
-  background-color: #f0f8ff;
+/* Share Proof Container (Combined Share Your Proof + Share Your Portfolio) */
+.share-proof-container {
+  background-color: white;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.share-title {
+.share-proof-title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.share-description {
+.share-proof-description {
   font-size: 14px;
   color: #666;
   margin-bottom: 15px;
 }
 
-.share-buttons {
+.share-proof-item {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.share-proof-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.share-proof-item-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.share-proof-item-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.share-proof-item-match {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+.share-proof-item-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.share-proof-item-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Share Your Portfolio Section (Inside the same container) */
+.share-portfolio-section {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.share-portfolio-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.share-portfolio-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.share-portfolio-buttons {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -392,10 +459,12 @@ main {
 
 /* Challenges Section */
 .challenges-section {
-  border: solid 1px var(--button-secondary);
+  background-color: white;
+  border: 1px solid var(--button-secondary);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .challenges-header {
@@ -424,12 +493,11 @@ main {
 }
 
 .challenge-card {
-  border: 1px solid var(--button-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 15px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .challenge-header {
@@ -506,9 +574,98 @@ main {
   text-decoration: underline;
 }
 
+/* Top Matches for You Section */
+.top-matches-section {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.top-matches-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.top-matches-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.top-matches-view-all {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.top-matches-view-all:hover {
+  text-decoration: underline;
+}
+
+.top-match-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.top-match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.top-match-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.top-match-company {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.top-match-company img {
+  width: 16px;
+  height: 16px;
+}
+
+.top-match-match {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+.top-match-action {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.top-match-action:hover {
+  text-decoration: underline;
+}
+
 /* Recommended Steps Section */
 .recommended-steps {
-  margin-bottom: 20px;
+  background-color: white;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 20px;
@@ -522,7 +679,6 @@ main {
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .step-title {
@@ -628,15 +784,15 @@ main {
     font-size: 20px;
   }
 
-  .share-portfolio {
+  .share-proof-container {
     padding: 25px;
   }
 
-  .share-title {
+  .share-proof-title {
     font-size: 18px;
   }
 
-  .share-description {
+  .share-proof-description {
     font-size: 16px;
   }
 
@@ -666,6 +822,30 @@ main {
 
   .challenge-description {
     font-size: 16px;
+  }
+
+  .top-matches-section {
+    margin-bottom: 25px;
+  }
+
+  .top-matches-header {
+    margin-bottom: 20px;
+  }
+
+  .top-matches-title {
+    font-size: 20px;
+  }
+
+  .top-match-card {
+    padding: 20px;
+  }
+
+  .top-match-header {
+    margin-bottom: 15px;
+  }
+
+  .top-match-title {
+    font-size: 18px;
   }
 
   .recommended-steps {
@@ -734,11 +914,11 @@ main {
     font-size: 24px;
   }
 
-  .share-portfolio {
+  .share-proof-container {
     padding: 30px;
   }
 
-  .share-title {
+  .share-proof-title {
     font-size: 20px;
   }
 
@@ -755,6 +935,22 @@ main {
   }
 
   .challenge-title {
+    font-size: 20px;
+  }
+
+  .top-matches-header {
+    margin-bottom: 20px;
+  }
+
+  .top-matches-title {
+    font-size: 20px;
+  }
+
+  .top-match-card {
+    padding: 25px;
+  }
+
+  .top-match-title {
     font-size: 20px;
   }
 
