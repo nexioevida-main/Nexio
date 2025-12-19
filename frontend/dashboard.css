@@ -239,3 +239,90 @@ main {
 .view-all-link:hover {
   text-decoration: underline;
 }
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-company {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.card-company img {
+  width: 16px;
+  height: 16px;
+}
+
+.card-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card-match {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+.card-status {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.card-status.warning {
+  background-color: var(--warning-color);
+  color: #333;
+}
+
+.card-status.success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.card-status.info {
+  background-color: var(--info-color);
+  color: white;
+}
+
+.card-action {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-action:hover {
+  text-decoration: underline;
+}
