@@ -206,13 +206,14 @@ main {
   margin-top: 5px;
 }
 
-/* Section Styles */
+/* your proof profile section */
 .section {
   background-color: white;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .section-header {
@@ -234,6 +235,10 @@ main {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
 }
 
 .view-all-link:hover {
@@ -387,6 +392,9 @@ main {
 
 /* Challenges Section */
 .challenges-section {
+  border: solid 1px var(--button-secondary);
+  border-radius: 8px;
+  padding: 20px;
   margin-bottom: 20px;
 }
 
@@ -416,11 +424,12 @@ main {
 }
 
 .challenge-card {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--button-secondary);
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 15px;
   background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .challenge-header {
@@ -500,6 +509,11 @@ main {
 /* Recommended Steps Section */
 .recommended-steps {
   margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .step-card {
@@ -508,6 +522,7 @@ main {
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .step-title {
