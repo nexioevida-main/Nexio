@@ -5,6 +5,9 @@ const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URL); // No need for options in Mongoose v6+
     console.log(" Connected ✅to MongoDB 📦");
+    console.log("DB NAME:", mongoose.connection.name);
+    console.log("DB HOST:", mongoose.connection.host);
+
 
     // Role Migration
     const result = await User.updateMany(

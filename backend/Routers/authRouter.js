@@ -5,11 +5,13 @@ import {
   passwordResetRequest,
   passwordReset,
   logout,
+  signup
 } from "../controllers/authApis/authController.js";
 
 const authRoutes = express.Router();
 
 authRoutes.post("/login", logginIn);
+authRoutes.post("/signup", signup);
 authRoutes.post("/google", googleAuth);
 authRoutes.post("/password-reset-request", passwordResetRequest);
 authRoutes.post("/password-reset", passwordReset);

@@ -8,3 +8,4 @@ export { default as deleteExperience } from "./deleteExperience.js";
 export { default as getPublicProfile } from "./getPublicProfile.js";
 export { default as searchProfiles } from "./searchProfiles.js";
 export { default as getProfileAnalytics } from "./getProfileAnalytics.js";
+export { default as updateSkills } from "./updateSkills.js";

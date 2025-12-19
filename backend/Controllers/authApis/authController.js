@@ -29,9 +29,7 @@ export const signup = async (req, res) => {
   }
 
   try {
-    const existingUser = await User.findOne({
-      $or: [{ gmail }, { username }],
-    });
+    const existingUser = await User.findOne({ gmail });
 
     if (existingUser) {
       return res.status(400).json({
@@ -45,6 +43,7 @@ export const signup = async (req, res) => {
       username,
       gmail,
       password: hashedPassword,
+      isVerified: true,
     });
 
     // OPTIONAL: send verification mail later
@@ -113,7 +112,7 @@ export const logginIn = async (req, res) => {
 
     const token = generateToken(user._id);
 
-        res.cookie("token", jwtToken, {
+        res.cookie("token", token, {
         httpOnly: true,
         sameSite:  process.env.NODE_ENV === "production" ? "none" : "lax",
         secure: process.env.NODE_ENV === "production",
@@ -136,7 +135,11 @@ export const logginIn = async (req, res) => {
 // GOOGLE SIGNUP / LOGIN
 // ======================
 export const googleAuth = async (req, res) => {
-  const { token } = req.body;
+    const { token } = req.body;
+
+  if (!token) {
+    return res.status(400).json({ message: "Google token missing" });
+  }
 
   try {
     const ticket = await googleClient.verifyIdToken({
@@ -145,12 +148,12 @@ export const googleAuth = async (req, res) => {
     });
 
     const payload = ticket.getPayload();
-    const { sub, email, name } = payload;
+    
 
-    let user = await User.findOne({ gmail: email });
+    let user = await User.findOne({ gmail:payload.email, googleId:payload.sub  });
 
     if (!user) {
-      const baseUsername = name
+      const baseUsername = payload.name
       .toLowerCase()
     .replace(/\s+/g, "-")
     .replace(/[^a-z0-9-]/g, "");
@@ -166,9 +169,9 @@ export const googleAuth = async (req, res) => {
         }
 
         user = await User.create({
-            gmail: email,
-            googleId: sub,
-            username,
+            gmail: payload.email,
+            googleId: payload.sub,
+            username: username,
             isVerified: true,
         });
     }
@@ -226,7 +229,7 @@ export const passwordResetRequest = async (req, res) => {
       subject: "Reset Password",
       body: `
         <p>Click below to reset your password:</p>
-        <a href="http://localhost:3000/password/reset/${token}">
+        <a href="http://localhost:5000/password/reset/${token}">
           Reset Password
         </a>
       `,

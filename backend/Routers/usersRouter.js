@@ -10,6 +10,7 @@ import {
   getPublicProfile,
   searchProfiles,
   getProfileAnalytics,
+  updateSkills
 } from "../Controllers/usersApis/barrel.js"
 
 import { authMiddleware } from "../Middlewares/authMiddleware.js";
@@ -34,7 +35,8 @@ userRoutes.put("/me", authMiddleware, updateProfile);
 
 // Skills
 userRoutes.post("/me/skills", authMiddleware, addSkill);
-userRoutes.delete("/me/skills/:skillId", authMiddleware, deleteSkill);
+userRoutes.patch("/me/skills/:skillID",authMiddleware, updateSkills);
+userRoutes.delete("/me/skills-delete/:skillId", authMiddleware, deleteSkill);
 
 // Experience
 userRoutes.post("/me/experience", authMiddleware, addExperience);

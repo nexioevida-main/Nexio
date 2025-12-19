@@ -27,7 +27,7 @@ export const authMiddleware = async (req, res, next) => {
       });
     }
 
-    if (verifiedUser.isSuspended) {
+    if (user.isSuspended) {
       return res.status(403).json({
         message: "Your account has been suspended",
       });

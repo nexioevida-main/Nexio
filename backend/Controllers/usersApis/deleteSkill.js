@@ -1,18 +1,15 @@
 export default async (req, res) => {
   try {
-    const { skillId } = req.params;
+    const { skillID } = req.params;    
+    const skill = req.user.skills.id(skillID)
 
-    const skillIndex = req.user.skills.findIndex(
-      (skill) => skill._id.toString() === skillId
-    );
-
-    if (skillIndex === -1) {
+    if (!skill) {
       return res.status(404).json({
         message: "Skill not found",
       });
     }
 
-    req.user.skills.splice(skillIndex, 1);
+    await skill.deleteOne();
     await req.user.save();
 
     res.status(200).json({
