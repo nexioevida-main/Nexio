@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { assets } from "../assets/assets";
+import { assets } from "../../assets/assets";
 
 const Navbar = () => {
   return (
@@ -19,11 +19,7 @@ const Navbar = () => {
       >
         {/* Logo - Left */}
         <div className="flex items-center">
-          <img
-            src={assets.logo}
-            alt="Logo"
-            className="h-10 w-auto"
-          />
+          <img src={assets.logo} alt="Logo" className="h-10 w-auto" />
         </div>
 
         {/* Nav Links - Center */}
